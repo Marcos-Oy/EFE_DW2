@@ -34,7 +34,7 @@
                     <label>Usuario:</label>
                     <input class="form-control" type="text" name="txtUsuario" placeholder="Ingrese nombre de usuario" class="form-control">
                     <label>Contraseña:</label>
-                    <input class="form-control" type="password" name="txtUsuario" class="form-control">
+                    <input class="form-control" type="password" name="txtUsuario" placeholder="Ingrese contraseña" class="form-control">
                     <br>
                     <a class="btn btn-success btn-lg" href="Controlador?accion=listar">Entrar</a>
                     </div>
