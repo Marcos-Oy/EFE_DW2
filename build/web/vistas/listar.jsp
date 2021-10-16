@@ -1,3 +1,9 @@
+<%-- 
+    Document   : index
+    Created on : 16-10-2021, 19:54:45
+    Author     : marcos oyarzo, gonzalo saavedra, aylin ledeza, carlos gaete
+--%>
+
 <%@page import="java.util.Iterator" %>
 <%@page import="Modelo.Persona" %>
 <%@page import="java.util.List" %>

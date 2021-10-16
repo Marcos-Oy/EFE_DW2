@@ -1,7 +1,7 @@
 <%-- 
-    Document   : add
-    Created on : 30-ago-2018, 19:58:16
-    Author     : Joel
+    Document   : index
+    Created on : 16-10-2021, 19:54:45
+    Author     : marcos oyarzo, gonzalo saavedra, aylin ledeza, carlos gaete
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
