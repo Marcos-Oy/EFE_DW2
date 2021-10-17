@@ -3,13 +3,15 @@ package Controlador;
 
 
 import ModeloDAO.PersonaDAO;
+import ModeloDAO.UsuarioDAO;
 import Modelo.Persona;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
+import javax.servlet.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
 
 
 public class Controlador extends HttpServlet {
@@ -19,6 +21,7 @@ public class Controlador extends HttpServlet {
     String edit = "vistas/edit.jsp";
     Persona p = new Persona();
     PersonaDAO dao = new PersonaDAO();
+    UsuarioDAO udao = new UsuarioDAO();
     int id;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -43,11 +46,20 @@ public class Controlador extends HttpServlet {
             throws ServletException, IOException {
         String acceso = "";
         String action = request.getParameter("accion");
+        
         if (action.equalsIgnoreCase("listar")) {
             acceso = listar;
-        } else if (action.equalsIgnoreCase("add")) {
+        } else if (action.equalsIgnoreCase("login")) {
+            String pw = request.getParameter("txtPass");
+            String nom = request.getParameter("txtUsuario");
+            System.out.println(pw);
+            boolean x = udao.login(nom, pw);
+            if (x) {
+                acceso = listar;
+            }
+        }else if (action.equalsIgnoreCase("add")) {
             acceso = add;
-        } else if (action.equalsIgnoreCase("Agregar")) {
+            } else if (action.equalsIgnoreCase("Agregar")) {
             String dni = request.getParameter("txtDni");
             String nom = request.getParameter("txtNom");
             p.setDni(dni);

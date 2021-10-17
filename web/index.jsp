@@ -3,7 +3,9 @@
     Created on : 16-10-2021, 19:54:45
     Author     : marcos oyarzo, gonzalo saavedra, aylin ledeza, carlos gaete
 --%>
-
+<%@page import="java.util.Iterator" %>
+<%@page import="java.util.List" %>
+<%@page import="ModeloDAO.UsuarioDAO" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@
         <br>        
         <br>
         <div class="container">
-            <form action="listar.jsp">
+            <form action="Controlador">
                 <div class="form-group text-center">
                 <img src="img/login.png" height="80" width="80"/>
                 <p><strong>Login</strong></p>
@@ -32,11 +34,12 @@
                 <div class="form-group">
                     <div class="container">
                     <label>Usuario:</label>
-                    <input class="form-control" type="text" name="txtUsuario" placeholder="Ingrese nombre de usuario" class="form-control">
+                    <input class="form-control" type="text" name="txtUsuario" placeholder="Ingrese nombre de usuario">
                     <label>Contraseña:</label>
-                    <input class="form-control" type="password" name="txtUsuario" placeholder="Ingrese contraseña" class="form-control">
+                    <input class="form-control" type="password" name="txtPass">
                     <br>
-                    <a class="btn btn-success btn-lg" href="Controlador?accion=listar">Entrar</a>
+                    <input class="btn btn-primary" type="submit" name="accion" value="login">
+                    <!--<a class="btn btn-success btn-lg" href="Controlador?accion=login">Entrar</a>-->
                     </div>
                 </div>    
             </form>
