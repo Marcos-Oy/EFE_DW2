@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class Conexion {
    private String username = "root";
-    private String password = "";
+    private String password = "admin";
     private String hostname = "localhost";
     private String port = "3306";
     private String database = "mvc_jsp";

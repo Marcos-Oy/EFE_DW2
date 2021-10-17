@@ -9,9 +9,8 @@ import Modelo.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.*;
-import javax.servlet.ServletException;
-import javax.servlet.http.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 
 
 public class Controlador extends HttpServlet {
